@@ -10,10 +10,7 @@ public class BusinessImplTest {
     @Test
     public void findTheGreatestFromAllData_Basic() {
 
-        DataServiceStub dataServiceStub = new DataServiceStub();
-        BusinessImpl businessImpl = new BusinessImpl(dataServiceStub);
-        int result = businessImpl.findTheGreatestFromAllData();
-        assertEquals(25, result);
+        assertEquals(25, new BusinessImpl(new DataServiceStub()).findTheGreatestFromAllData());
 
     }
 }
